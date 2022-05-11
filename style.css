@@ -335,6 +335,7 @@ a:hover {
 .nav > li a:hover,
 .nav > li a:focus {
     background: transparent;
+    text-decoration: underline;
 }
 
 .navbar-toggle {
@@ -704,6 +705,10 @@ p {
     margin: auto auto auto auto;
 }
 
+.social:focus .icon-md {
+    color: #f1f1f1;
+}
+
 h2 {
     font-size: 22px;
     line-height: 1.4em;
@@ -775,7 +780,13 @@ h4 {
 }
 
 .tc-white {
-    color: #fdb797!important;
+    color: #F3976C!important;
+    position: relative;
+    z-index: 1;
+}
+
+.tc-white_contact {
+    color: #f1f1f1!important;
     position: relative;
     z-index: 1;
 }
@@ -785,7 +796,8 @@ h4 {
     color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
+.btn-atomic-tangerine:hover,
+.btn-atomic-tangerine:focus {
     background: #c27956!important;
     color: #FFFFFF!important;
 }
@@ -796,6 +808,10 @@ h4 {
 
 .ltc-white:hover {
     color: #cccccc!important;
+}
+
+.ltc-white:focus {
+    background: rgba(165, 147, 99, 0.7);
 }
 
 .ltc-atomic-tangerine {
@@ -967,6 +983,9 @@ h4 {
         max-height: 40px;
         width: auto;
     }
+    .navbar-brand:focus img {
+        border: 1px solid rgba(255, 255, 255, .2);
+    }
     .nav-invert .navbar-header {
         float: none;
         width: 100%;
@@ -1041,4 +1060,28 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+
+a:focus img {
+    border: 1px solid rgb(243, 151, 108);
+    border-radius: 5px;
+}
+
+blockquote {
+    margin: 0;
+    border: 0;
+}
+
+blockquote p {
+    padding: 10px;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+
+blockquote p::before {
+    content: "\201C";
+}
+
+blockquote p::after {
+    content: "\201C";
 }
