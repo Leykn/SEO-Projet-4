@@ -1085,3 +1085,7 @@ blockquote p::before {
 blockquote p::after {
     content: "\201C";
 }
+
+.mailto:hover, .mailto:focus {
+    text-decoration: underline;
+}
