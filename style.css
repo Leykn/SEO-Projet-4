@@ -352,6 +352,10 @@ a:hover {
     width: 26px;
 }
 
+button:focus .icon-bar {
+    background-color: #000000;
+}
+
 .nav-invert .navbar .nav {
     float: left;
 }
