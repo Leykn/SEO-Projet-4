@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     background: #FFF;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 a,
@@ -331,7 +336,7 @@ a:hover {
 }
 
 .navbar-toggle {
-    margin: 10px 10px 0 0;
+    margin: 0 10px 0 0;
     border: 0px;
 }
 
@@ -346,6 +351,31 @@ a:hover {
 
 button:focus .icon-bar {
     background-color: #000000;
+}
+
+#icon-bar {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    position: relative;
+}
+#icon-bar::before,
+#icon-bar::after {
+  content:'';
+  width:30px;
+  height:2px;
+  background:#333;
+  display:inline-block;
+  position:absolute;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+#icon-bar::before {
+  top:-7px;
+}
+#icon-bar::after {
+  top:7px;
 }
 
 .nav-invert .navbar .nav {
@@ -648,10 +678,6 @@ a {
     color: #575757!important;
 }
 
-.container {
-    max-width: 1000px;
-}
-
 .hero-bloc-text {
     font-size: 38px;
 }
@@ -685,7 +711,6 @@ p {
 }
 
 .cta-hero {
-    margin-top: 22px;
     color: #FFFFFF!important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
@@ -872,6 +897,9 @@ h4 {
 }
 
 @media (max-width: 991px) {
+    .nav_contact {
+        margin-right: 20px;
+    }
     .container {
         width: 100%;
     }
@@ -921,7 +949,27 @@ h4 {
         border-top: 1px solid rgba(0, 0, 0, .2);
         float: none!important;
     }
+    .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nav_contact {
+        width: 100%;
+    }
+    .cta-hero {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 6px auto;
+        width: 110%;
+        border-radius: 0;
+    }
+    .visible{
+        display: inline-flex;
+    }
     .navbar.row {
+        width: 100%;
         margin-left: 0;
         margin-right: 0;
     }
@@ -1075,4 +1123,25 @@ blockquote p::after {
 
 .mailto:hover, .mailto:focus {
     text-decoration: underline;
+}
+
+.nav_contact {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #333;
+    z-index: 9;
+}
+
+@media (max-width: 350px) {
+    .navbar-brand img {
+        width: 100%;
+    }
+    .nav_contact {
+        margin-right: 0;
+    }
 }
