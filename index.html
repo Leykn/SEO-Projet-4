@@ -10,12 +10,12 @@
 
 	<link rel="stylesheet" type="text/css" href="styles.pure.css">
     
-	<!-- <script src="./js/jquery-2.1.0_min.js"></script>
-	<script src="./js/bootstrap_min.js"></script> -->
+	<script src="./js/jquery-2.1.0_min.js"></script>
+	<script src="./js/bootstrap_min.js"></script>
 	<script src="./js/blocs_min.js"></script>
-	<!-- <script src="./js/jquery.touchSwipe_min.js" defer></script> -->
-	<script src="./js/map.js"></script>
-	<!-- <script src="./js/jqBootstrapValidation_min.js"></script> -->
+	<script src="./js/jquery.touchSwipe_min.js" defer></script>
+	<!-- <script src="./js/map.js"></script> -->
+	<script src="./js/jqBootstrapValidation_min.js"></script>
 	<script src="./js/formHandler_min.js"></script>
 	<script src="./js/sticky.js"></script>
 
@@ -210,27 +210,28 @@
 			<div class="col-sm-6">
 				<form id="form_1" novalidate data-success-msg="Your message has been sent." data-fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
 					<div class="form-group">
-						<label>
+						<label for="name">
 							Nom
 						</label>
 						<input id="name" class="form-control" required />
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="email">
 							Adresse email
 						</label>
 						<input id="email" class="form-control" type="email" required />
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="how">
 							Comment nous avez-vous connu ?
 						</label>
-						<input class="form-control" type="text" required id="input_504" />
+						<input class="form-control" type="text" required id="how" />
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="message">
 							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-						</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
+						</label>
+						<textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
 					</div> 
 					<button class="bloc-button btn btn-lg btn-block cta-heros btn-atomic-tangerine" type="submit">
 						Envoyer
@@ -245,10 +246,10 @@
 					Ouvert de 9h à 18h, du lundi au vendredi
 				</address>
 				<div id="map"></div>
-				<script
+				<!-- <script
     				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-llwfT3Zqj6j3i-4Kkt-qi_kSZ7ZgrWk&callback=initMap"
     				defer type="text/javascript">
-    			</script>
+    			</script> -->
 			</div>
 		</div>
 	</div>
@@ -256,7 +257,7 @@
 <!-- bloc-7 END -->
 
 <!-- ScrollToTop Button -->
-<a tabindex="0" class="bloc-button btn btn-d scrollToTop" onclick="topFunction()" id="scrollToTop"><span class="fa fa-chevron-up"></span></a>
+<a aria-label="remonte en haut de la page" tabindex="0" href="#top" class="bloc-button btn btn-d scrollToTop" onclick="topFunction()" id="scrollToTop"><span class="fa fa-chevron-up"></span></a>
 <!-- ScrollToTop Button END-->
 
 <!-- Footer - bloc-8 -->
