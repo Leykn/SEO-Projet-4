@@ -5,11 +5,6 @@ window.addEventListener("scroll", function(){
     toTop.classList.toggle("showScrollTop", window.scrollY > 100)
 })
 
-function topFunction(){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
 function hamb(){
     let button = document.getElementById('cta-hero');
     button.classList.toggle('visible');
